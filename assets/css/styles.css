@@ -1,0 +1,105 @@
+/*
+	Stylesheet for personal use.
+		@author Chris
+		@contact Chris.#4825
+	Copyright 2021 (C) C. Chris Cooper.
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,900");
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	background: black url('../img/bg.png');
+	animation: easeIn 2s backwards;
+	margin: 0;
+	min-height: 100vh;
+	position: relative;
+}
+
+.logo{
+    pointer-events: none;
+	margin-top: 2em;
+    width: 20%;
+  }
+
+h1{
+	text-align: left;
+	color: white;
+	font-size: 2.6rem;
+	text-transform: uppercase;
+	position: relative;
+	margin-left: 1.5em;
+	text-shadow: 4px 4px #49719275;
+}
+
+.description{
+text-align: left;
+color: white;
+line-height: 1.2rem;
+position: relative;
+}
+
+h2{
+	text-align: left;
+	color: white;
+	font-size: 2rem;
+	text-transform: uppercase;
+	position: relative;
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+	text-shadow: 4px 4px #49719275;	
+}
+
+.txt-1{
+	font-size: 1.2rem;
+	margin-top: 1.5em;
+	line-height: 1.7rem;
+	margin-left: 2.5em;
+	width: 55%;
+}
+
+.txt-2{
+	font-size: 1.5rem;
+	margin-top: 1.6em;
+	line-height: 1.6rem;
+	margin-left: 2.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: 30%;	
+	text-shadow: 3px 3px #4f789975;	
+}
+
+.socials{
+	    margin-top: 2.2em;
+		padding-top: 0;
+		flex-direction: row-reverse;
+		align-self: flex-end;
+}
+
+.social-icon{
+		margin-left: 2em;
+		margin-bottom: 0;
+		color: white;
+		text-shadow: 2.1px 2.1px #4f789975;	
+		font-size: 2.5rem;
+}
+
+#text{
+	display: none;
+}
+
+@keyframes easeIn{
+	from{
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+		to{
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+}
+
+#footer_area {
+	 display:inline!important 
+}
