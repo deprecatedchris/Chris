@@ -80,7 +80,7 @@ function ()
 {
     copyText(document.querySelector('#text'));
     swal({
-        text: "Discord username as been Copied!",
+        text: "Discord username has been Copied!",
         icon: "success",
       });
 }
