@@ -213,7 +213,6 @@ img{
 
 .logo{
 pointer-events: none;
-margin-bottom: var(--mb-5);
 width: 30%;
 }
 
