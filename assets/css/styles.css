@@ -215,7 +215,7 @@ img{
 pointer-events: none;
 margin-left: var(--mb-2);
 margin-right: var(--mb-2);
-width: 40%;
+width: 20%;
 }
 
 @media screen and (min-width: 1024px){
