@@ -1,0 +1,71 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root{
+    --header-height: 2rem;
+    --font-semi: 600;
+}
+
+/*===== Fuente y tipografia =====*/
+:root{
+    --body-font: 'Poppins', sans-serif;
+	background: rgb(34, 33, 33);
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+
+    @media screen and (min-width: 768px){
+        --big-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*===== Margenes =====*/
+:root{
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 1rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+}
+
+/*===== z index =====*/
+:root{
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+.logo{
+    pointer-events: none;
+	margin-top: 2em;
+    width: 20%;
+    padding-bottom: 1rem;
+  }
+/* COPY TO CLIPBOARD ALERT SYSTEM */
+#text{
+	display: none;
+}
+
+/*===== CLASS CSS ===== */
+.section{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/*===== LAYOUT =====*/
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+
+

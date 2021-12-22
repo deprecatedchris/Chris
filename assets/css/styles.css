@@ -1,138 +1,235 @@
-/*
-	Stylesheet for personal use.
-		@author Chris
-		@contact Chris.#0111
-	Copyright 2021 (C) C. Chris Cooper.
-*/
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,900");
-
-body{
-	font-family: 'Montserrat', sans-serif;
-	background: black url('../img/bg.png');
-	animation: easeIn 2s backwards;
-	margin: 0;
-	min-height: 100vh;
-	background-repeat: no-repeat
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root{
+  --header-height: 3rem;
+  --font-semi: 600;
 }
 
-.logo{
-    pointer-events: none;
-	margin-top: 2em;
-    width: 20%;
+/*===== Colors =====*/
+:root{
+  --first-color: #1db685;
+  --second-color: #e8f0f0;
+}
+
+:root{
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+}
+@media screen and (min-width: 768px){
+  :root{
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
   }
-
-h1{
-	text-align: left;
-	color: white;
-	font-size: 2.6rem;
-	text-transform: uppercase;
-	position: relative;
-	margin-left: 1.5em;
-	text-shadow: 4px 4px #49719275;
 }
-
-.description{
-text-align: left;
-color: white;
-line-height: 1.2rem;
-position: relative;
-}
-
-h2{
-	text-align: left;
-	color: white;
-	font-size: 2rem;
-	text-transform: uppercase;
-	position: relative;
-	margin-top: 1.5em;
-	margin-left: 1.5em;
-	text-shadow: 4px 4px #49719275;	
-}
-
-.txt-1{
-	font-size: 1.2rem;
-	margin-top: 1.5em;
-	line-height: 1.7rem;
-	margin-left: 2.5em;
-	width: 55%;
-}
-
-.txt-2{
-	font-size: 1.5rem;
-	margin-top: 1.6em;
-	line-height: 1.6rem;
-	margin-left: 2.1em;
-	text-transform: uppercase;
-	font-weight: bold;
-	width: 30%;	
-	text-shadow: 3px 3px #4f789975;	
-}
-
-.socials{
-	    margin-top: 2.2em;
-		padding-top: 0;
-		flex-direction: row-reverse;
-		align-self: flex-end;
-}
-
-.social-icon{
-		margin-left: 2em;
-		margin-bottom: 0;
-		color: white;
-		text-shadow: 2.1px 2.1px #4f789975;	
-		font-size: 2.5rem;
-}
-
+/* COPY TO CLIPBOARD ALERT SYSTEM */
 #text{
 	display: none;
 }
 
-@keyframes easeIn{
-	from{
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-		to{
-			opacity: 1;
-			transform: translateY(0);
-		}
-
+/*===== Margins =====*/
+:root{
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
 }
 
-#footer_area {
-	 display:inline!important 
+/*===== z index =====*/
+:root{
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-@media(max-width: 548px){
-	h1{
-		text-align: left;
-		color: white;
-		font-size: 2.6rem;
-		text-transform: uppercase;
-		position: relative;
-		margin-left: 1.3em;
-		text-shadow: 4px 4px #49719275;
-	}
-
-	.logo{
-		pointer-events: none;
-		margin-top: 2em;
-		width: 30%;
-	  }
-	
-	.socials{
-	    margin-top: 2.2em;
-		padding-top: 0;
-		flex-direction: row;
-		align-self: flex-end;
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+	background: #111;
+}
+h1,h2,p{
+  margin: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.social-icon{
-		margin-left: 1.5em;
-		margin-bottom: 0;
-		color: white;
-		text-shadow: 2.1px 2.1px #4f789975;	
-		font-size: 2.4rem;
+.section{
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
+
+/*===== LAYOUT =====*/
+.bd-grid{
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+.l-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: rgb(48, 47, 47);
+  box-shadow: 0 1px 4px rgba(146,161,176,.15);
+}
+
+/*===== HOME =====*/
+.home{
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
+}
+.home__data{
+  align-self: center;
+}
+.home__title{
+  font-size: var(--big-font-size);
+  margin-bottom: var(--mb-5);
+  color: var(--second-color);
+}
+.home__title-color{
+  color: var(--first-color);
+}
+.home__social{
+  display: flex;
+  flex-direction: column;
+}
+.home__social-icon{
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+.home__social-icon:hover{
+  color: var(--first-color);
+}
+.home__img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 295px;
+}
+
+/*BUTTONS*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: .75rem 2.5rem;
+  font-weight: var(--font-semi);
+  border-radius: .5rem;
+}
+.button:hover{
+  box-shadow: 0 10px 36px rgba(0,0,0,.15);
+}
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px){
+  body{
+    margin: 0;
+  }
+  .section{
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .section-title{
+    margin-bottom: var(--mb-6);
+  }
+  .section-title::after{
+    width: 80px;
+    top: 3rem;
+  }
+
+  .home{
+    height: 100vh;
+  }
+  .home__data{
+    align-self: flex-end;
+  }
+  .home__social{
+    padding-top: 0;
+    padding-bottom: 2.5rem;
+    flex-direction: row;
+    align-self: flex-end;
+  }
+  .home__social-icon{
+    margin-bottom: 0;
+    margin-right: var(--mb-4);
+  }
+  .home__img{
+    width: 457px;
+    bottom: 15%;
+  }
+
+  .about__container, .skills__container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: initial;
+  }
+  .about__img img{
+    width: 300px;
+  }
+  .work__container{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 2rem;
+  }
+  .contact__form{
+    width: 360px;
+  }
+  .contact__container{
+    justify-items: center;
+  }
+}
+
+.logo{
+pointer-events: none;
+margin-left: -12rem;
+margin-right: var(--mb-2);
+width: 30%;
+}
+
+@media screen and (min-width: 1024px){
+  .bd-grid{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home__img{
+    right: 10%;
+  }
+}
+
+/* COPY TO CLIPBOARD */
+
+#text{
+  color: #fff
 }
